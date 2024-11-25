@@ -1,0 +1,90 @@
+@use "../../foundation/" as v;
+
+.p-chat {
+  .p-chat__title {
+    font-size: v.$font-size-lg;
+  }
+
+  .p-chat__box {
+    height: 65vh;
+    max-height: 600px;
+    background-color: v.$color-white;
+    box-shadow: v.$box-shadow-box;
+    border-radius: 20px;
+    margin-top: 1rem;
+    padding: 2rem;
+    overflow-y: scroll;
+
+    /* スクロールバーのカスタマイズ */
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: v.$color-primary;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: v.$color-gray;
+      border-radius: 10px;
+    }
+  }
+
+  .p-chat__box-list {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .p-chat__box-msg {
+      max-width: 180px;
+      border-radius: 30px;
+      padding: 0.5rem 1.8rem;
+      min-height: 30px;
+      font-size: v.$font-size-sm;
+    }
+
+    .p-chat__box-date {
+      margin-top: 0.3rem;
+      padding-right: 0.6rem;
+    }
+  }
+
+  // メッセージのステータスmeがおくったときのスタイル
+  .--me {
+    align-items: flex-end;
+    .p-chat__box-msg {
+      background-color: v.$color-secondary;
+    }
+  }
+
+  // メッセージのステータスmeがおくったときのスタイル
+  .--you {
+    .p-chat__box-msg {
+      background-color: v.$color-gray;
+    }
+
+    .p-chat__box-date {
+      padding-left: 0.6rem;
+    }
+  }
+
+  .p-chat__form {
+    display: flex;
+    column-gap: 20px;
+    margin-top: 2rem;
+    font-size: v.$font-size-md;
+
+    .p-chat__form-select {
+      width: 100%;
+      max-width: 120px;
+      cursor: pointer;
+    }
+
+    .p-chat__form-input-wrapper {
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+}

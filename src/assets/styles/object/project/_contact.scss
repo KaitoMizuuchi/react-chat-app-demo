@@ -1,0 +1,85 @@
+@use "../../foundation/variable" as v;
+
+.p-contact {
+  .p-contact__title {
+    text-align: center;
+    font-size: v.$font-size-xl;
+  }
+
+  .p-contact__form {
+    margin-top: 3rem;
+
+    .p-contact__form-label {
+      display: block;
+      position: relative;
+
+      .p-contact__form-label-title {
+        font-size: v.$font-size-md;
+        margin-bottom: 1rem;
+
+        .p-contact__form-label-chip {
+          font-size: v.$font-size-xs;
+          width: fit-content;
+          height: 20px;
+          padding: 0 1rem;
+          margin-left: 1rem;
+          color: v.$color-white;
+          background-color: v.$color-error;
+          border-radius: 20px;
+        }
+      }
+      // インプット欄の下部に余白
+      &.--mb-4 {
+        margin-bottom: 4rem;
+      }
+
+      // テキストエリアのスタイル
+      .p-contact__form-textarea {
+        width: 100%;
+        min-height: 210px;
+        border-radius: 20px;
+        resize: none;
+        border: none;
+        box-shadow: v.$box-shadow-box;
+        padding: 1.5rem;
+        font-size: v.$font-size-sm;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .p-contact__form-error {
+        font-size: v.$font-size-xs;
+        color: v.$color-error;
+        position: absolute;
+        left: 1.5rem;
+        bottom: -3.5rem;
+
+        &.--sm-bottom {
+          bottom: -1.5rem;
+        }
+      }
+
+      .p-contact__confirm-text {
+        height: 50px;
+        font-size: v.$font-size-md;
+        margin-bottom: 4rem;
+      }
+    }
+
+    .p-contact__form-btn-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
+
+      .p-content__form-send-btn {
+        margin: 0 5rem;
+        &.--blue {
+          color: v.$color-white;
+          background-color: v.$color-primary;
+        }
+      }
+    }
+  }
+}

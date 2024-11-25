@@ -1,0 +1,18 @@
+@use "../../foundation/variable" as v;
+
+.c-btn {
+  height: 45px;
+  border-radius: 45px;
+  background-color: v.$color-white;
+  color: v.$color-primary;
+  border: 1px solid v.$color-primary;
+  font-size: v.$font-size-md;
+  box-shadow: v.$box-shadow-button;
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: none;
+    transform: translateY(4px);
+  }
+}

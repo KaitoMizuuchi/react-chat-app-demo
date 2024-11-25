@@ -1,0 +1,31 @@
+@use "../../foundation/variable" as v;
+
+.c-input {
+  position: relative;
+
+  .c-input__field {
+    position: relative;
+    font-size: v.$font-size-sm;
+    padding: 0 1.5rem;
+    width: 100%;
+    height: 45px;
+    border-radius: 45px;
+    border: none;
+    box-shadow: v.$box-shadow-box;
+
+    &::placeholder {
+      font-size: v.$font-size-xs;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .c-input__error {
+    position: absolute;
+    bottom: -2rem;
+    left: 1.5rem;
+    color: v.$color-error;
+    font-size: v.$font-size-xs;
+  }
+}
