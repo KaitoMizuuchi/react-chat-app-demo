@@ -76,32 +76,31 @@ const Contact = () => {
           label="お名前"
           isRequired
           isConfirm={isConfirm}
-          textInput={
-            <TextInput
-              id="name"
-              placeholder="名前を入力"
-              value={inputData.name}
-              onChange={handleInputChange}
-              errorMsg={error.name}
-            />
-          }
-        />
+        >
+          <TextInput
+            id="name"
+            placeholder="名前を入力"
+            value={inputData.name}
+            onChange={handleInputChange}
+            errorMsg={error.name}
+          />
+        </InputLabel>
         <InputLabel
           id="mail"
           value={inputData.mail}
           label="メールアドレス"
           isRequired
           isConfirm={isConfirm}
-          textInput={
-            <TextInput
-              id="mail"
-              placeholder="メールアドレスを入力"
-              value={inputData.mail}
-              onChange={handleInputChange}
-              errorMsg={error.mail}
-            />
-          }
-        />
+        >
+          <TextInput
+            id="mail"
+            placeholder="メールアドレスを入力"
+            value={inputData.mail}
+            onChange={handleInputChange}
+            errorMsg={error.mail}
+          />
+        </InputLabel>
+
         <TextAreaLabel
           id="content"
           label="お問い合わせ内容"

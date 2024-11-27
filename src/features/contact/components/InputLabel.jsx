@@ -1,6 +1,6 @@
 import React from "react";
 
-const InputLabel = ({ id, label, value, isRequired, isConfirm, textInput }) => {
+const InputLabel = ({ id, label, value, isRequired, isConfirm, children }) => {
   return (
     <label htmlFor={id} className="p-contact__form-label --mb-4">
       <p className="p-contact__form-label-title">
@@ -11,7 +11,7 @@ const InputLabel = ({ id, label, value, isRequired, isConfirm, textInput }) => {
       </p>
       {/* 確認画面かどうかを三項演算子で条件分岐 */}
       {!isConfirm ? (
-        <>{textInput}</>
+        <>{children}</>
       ) : (
         <p className="p-contact__confirm-text">{value}</p>
       )}
